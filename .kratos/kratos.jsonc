@@ -1,0 +1,23 @@
+{
+  "$schema": "https://kellton-kratos.io/config.json",
+  // "plugin": ["kratos-openai-codex-auth"],
+  // "enterprise": {
+  //   "url": "https://enterprise.dev.kellton-kratos.io",
+  // },
+  "instructions": ["STYLE_GUIDE.md"],
+  "provider": {
+    "kratos": {
+      "options": {},
+    },
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+    },
+  },
+  "tools": {
+    "github-triage": false,
+    "github-pr-search": false,
+  },
+}

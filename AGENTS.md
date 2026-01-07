@@ -1,0 +1,4 @@
+- To test kratos in the `packages/kratos` directory you can run `bun dev`
+- To regenerate the javascript SDK, run ./packages/sdk/js/script/build.ts
+- ALWAYS USE PARALLEL TOOLS WHEN APPLICABLE.
+- the default branch in this repo is `dev`
