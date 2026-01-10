@@ -24,3 +24,7 @@ target
 # Local dev files
 kratos-dev
 logs/
+.kratos/kratos.jsonc
+
+# Graphiti MCP (cloned repo)
+graphiti-mcp/

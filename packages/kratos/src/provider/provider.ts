@@ -139,6 +139,8 @@ export namespace Provider {
       }
     },
     azure: async () => {
+      const resourceName = Env.get("AZURE_RESOURCE_NAME")
+      console.log("[AzureProvider] AZURE_RESOURCE_NAME:", resourceName)
       return {
         autoload: false,
         async getModel(sdk: any, modelID: string, options?: Record<string, any>) {
@@ -148,7 +150,7 @@ export namespace Provider {
             return sdk.responses(modelID)
           }
         },
-        options: {},
+        options: resourceName ? { resourceName } : {},
       }
     },
     "azure-cognitive-services": async () => {
@@ -548,13 +550,13 @@ export namespace Provider {
         },
         experimentalOver200K: model.cost?.context_over_200k
           ? {
-              cache: {
-                read: model.cost.context_over_200k.cache_read ?? 0,
-                write: model.cost.context_over_200k.cache_write ?? 0,
-              },
-              input: model.cost.context_over_200k.input,
-              output: model.cost.context_over_200k.output,
-            }
+            cache: {
+              read: model.cost.context_over_200k.cache_read ?? 0,
+              write: model.cost.context_over_200k.cache_write ?? 0,
+            },
+            input: model.cost.context_over_200k.input,
+            output: model.cost.context_over_200k.output,
+          }
           : undefined,
       },
       limit: {
