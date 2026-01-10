@@ -92,4 +92,4 @@ Each agent markdown file contains:
 - **Outputs**: Expected deliverables
 - **Boundaries**: What the agent will/won't do
 
-Copy these files to your Claude/AI environment's agents folder to use them.
+
